@@ -15,14 +15,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Embrace-Change-Consulting.github.io',
+  url: 'docs.manager-dash.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/managerdash-docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Embrace-Change-Consulting', // Usually your GitHub org/user name.
+  organizationName: 'NorthVine-Consulting', // Usually your GitHub org/user name.
   projectName: 'managerdash-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -140,7 +140,7 @@ const config: Config = {
         //   ],
         // },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Embrace Change Consulting.`,
+      copyright: `Copyright © ${new Date().getFullYear()} NorthVine Consulting.`,
     },
     prism: {
       theme: prismThemes.github,
