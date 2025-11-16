@@ -11,13 +11,21 @@ This guide covers how to create, manage, and track goals and milestones in Manag
 
 Goals represent high-level objectives for individuals or teams. Each goal can have multiple milestones to track progress.
 
+### Goal Types
+
+ManagerDash supports two types of goals:
+
+- **Development Goals**: Time-bound objectives focused on specific deliverables and projects
+- **Career Goals**: Long-term professional growth objectives without specific deadlines
+
 ### Goal Properties
 
 - **Title**: Clear, concise name for the goal (required)
 - **Description**: Detailed explanation of the goal
+- **Goal Type**: Development or Career (selected when creating)
 - **Status**: Current state (Planned, In Progress, Done, Blocked, Archived)
 - **Start Date**: When work begins
-- **Target Date**: When the goal should be completed
+- **Target Date**: When the goal should be completed (Development goals only)
 - **Milestones**: Trackable sub-tasks or checkpoints
 
 ## Creating a Goal
@@ -30,9 +38,10 @@ Goals represent high-level objectives for individuals or teams. Each goal can ha
 4. Fill in the goal form:
    - **Title**: Enter the goal name (required)
    - **Description**: Add context and details
+   - **Goal Type**: Choose Development or Career
    - **Status**: Select initial status (default: Planned)
    - **Start Date**: Choose when to begin
-   - **Target Date**: Set the deadline
+   - **Target Date**: Set the deadline (Development goals only - Career goals don't require a target date)
 5. Click **Save**
 
 ### For a Team
@@ -72,7 +81,7 @@ Milestones break down goals into smaller, trackable units.
 ### Creating a Milestone
 
 1. Expand a goal (it should not be collapsed)
-2. In the milestones section, click **"+ Add Milestone"**
+2. In the goal's action row, click **"+ Add Milestone"**
 3. Fill in the milestone form:
    - **Title**: Name of the milestone (required)
    - **Description**: Additional context
@@ -269,15 +278,18 @@ Goal: "Launch Mobile App v2.0"
 ## Reporting
 
 Goals and milestones appear in:
-- **Individual Reports**: Personal achievement summaries
+- **Individual Reports**: Personal achievement summaries with career and development goals separated
 - **Team Reports**: Collective progress overview
 - **Markdown Exports**: Detailed goal breakdowns with progress metrics
 
 Reports show:
+- Goal type (Career or Development)
 - Goal status and dates
 - Milestone completion percentage
 - Completed vs. total milestones
 - Individual milestone status with completion dates
+
+**Note**: In reports, career goals are separated from development goals to provide a clearer view of long-term career objectives versus time-bound project goals.
 
 ## Tips and Tricks
 

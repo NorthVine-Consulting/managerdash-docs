@@ -10,25 +10,26 @@ This guide provides advanced tips, best practices, and workflows to help you get
 ### First Week Setup
 
 **Day 1: Basic Configuration**
-1. Add yourself as an alias (for testing)
+1. Add yourself as a contributor (for testing)
 2. Create 1-2 test teams
 3. Configure GitHub token in Preferences
 4. Explore the interface
 5. Familiarize yourself with navigation
 
 **Day 2-3: Add Your Team**
-1. Add all team members with complete profiles
+1. Add all team members and create profiles
 2. Set up teams matching your org structure
 3. Assign seniority levels
 4. Verify GitHub usernames
 5. Use drag-and-drop to organize
 
 **Day 4-5: Initial Data Entry**
-1. Set goals for each person (current quarter)
+1. Set development goals for each person (current quarter)
 2. Create baseline skills assessments
 3. Add any recent feedback
 4. Fetch last month of PRs
 5. Review everything for accuracy
+6. Create career goals to track progress long term.
 
 ### Building Good Habits
 
