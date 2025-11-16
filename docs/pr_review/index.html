@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Pull Request Review | ManagerDash Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://docs.manager-dash.com/docs/pr_review"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Pull Request Review | ManagerDash Docs"><meta data-rh="true" name="description" content="This guide covers how to fetch, review, and rate pull requests in ManagerDash."><meta data-rh="true" property="og:description" content="This guide covers how to fetch, review, and rate pull requests in ManagerDash."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://docs.manager-dash.com/docs/pr_review"><link data-rh="true" rel="alternate" href="http://docs.manager-dash.com/docs/pr_review" hreflang="en"><link data-rh="true" rel="alternate" href="http://docs.manager-dash.com/docs/pr_review" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pull Request Review","item":"http://docs.manager-dash.com/docs/pr_review"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="ManagerDash Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="ManagerDash Docs Atom Feed"><link rel="stylesheet" href="/assets/css/styles.2edfd107.css">
-<script src="/assets/js/runtime~main.7919eee7.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2a2edded.js" defer="defer"></script>
 <script src="/assets/js/main.d0db4a51.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,8 +26,8 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h3>
 <p>To use PR Review, you need:</p>
 <ul>
-<li>GitHub username configured for the person (in their alias profile)</li>
-<li>GitHub Personal Access Token (configured in Settings → Preferences)</li>
+<li>GitHub username configured for the person (in their contributor profile)</li>
+<li>GitHub Personal Access Token (configured in Settings → Configuration)</li>
 <li>Internet connection to fetch from GitHub</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-github-integration">Setting Up GitHub Integration<a href="#setting-up-github-integration" class="hash-link" aria-label="Direct link to Setting Up GitHub Integration" title="Direct link to Setting Up GitHub Integration" translate="no">​</a></h2>
@@ -96,7 +96,7 @@ Rating a pull request as a feedback opportunity is a way for managers to find tr
 <li>Incomplete testing or documentation</li>
 <li>Breaks existing functionality/needs to be reverted</li>
 </ul>
-<p>When you mark a PR as a Feedback Opportunity, your notes will also be recorded as pending feedback.</p>
+<p>When you mark a PR as a Feedback Opportunity, your notes will be automatically recorded as pending feedback in the person&#x27;s Feedback tab, preserving the context of the PR review.</p>
 <p><strong>Meeting Expectations (=)</strong>:
 A PR is Meeting Expectations if it is a good representation of the contribution expected from an engineer at any level. What is defined as quality contributions will vary between companies and teams, but some examples of contributions that meet expectations are:</p>
 <ul>
@@ -144,10 +144,12 @@ A PR is Exceeding Expectations if it represents an outstanding contribution from
 <ol>
 <li>Rate the PR first (select a circle)</li>
 <li>A text area appears below the PR</li>
+<li>Optionally, specify the <strong>Author</strong> of the feedback (defaults to you if left blank)</li>
 <li>Type your notes</li>
 <li>Notes save automatically after 500ms</li>
 <li>No &quot;Save&quot; button needed</li>
 </ol>
+<p><strong>Note</strong>: The PR title and your review context are automatically preserved when creating feedback from PR reviews, making it easy to reference specific contributions later.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-to-include-in-notes">What to Include in Notes<a href="#what-to-include-in-notes" class="hash-link" aria-label="Direct link to What to Include in Notes" title="Direct link to What to Include in Notes" translate="no">​</a></h3>
 <p><strong>Good Notes Include</strong>:</p>
 <ul>
@@ -215,7 +217,7 @@ A PR is Exceeding Expectations if it represents an outstanding contribution from
 <p><strong>Problem</strong>: Fetch returns no results
 <strong>Solution</strong>:</p>
 <ul>
-<li>Verify GitHub username is correct in alias profile</li>
+<li>Verify GitHub username is correct in contributor profile</li>
 <li>Check date range (too narrow?)</li>
 <li>Ensure person authored PRs in that period</li>
 <li>Verify GitHub token is valid</li>
@@ -225,7 +227,7 @@ A PR is Exceeding Expectations if it represents an outstanding contribution from
 <p><strong>Problem</strong>: &quot;Failed to fetch&quot; error
 <strong>Solution</strong>:</p>
 <ul>
-<li>Check GitHub token in Preferences</li>
+<li>Check GitHub token in Configuration</li>
 <li>Verify token has correct permissions</li>
 <li>Check internet connection</li>
 <li>Try refreshing the app</li>
@@ -256,7 +258,7 @@ A PR is Exceeding Expectations if it represents an outstanding contribution from
 <li>Regenerate token on GitHub</li>
 <li>Ensure correct scopes selected</li>
 <li>Copy entire token (no spaces)</li>
-<li>Save in Preferences</li>
+<li>Save in Configuration</li>
 <li>Try fetching again</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="privacy-and-security">Privacy and Security<a href="#privacy-and-security" class="hash-link" aria-label="Direct link to Privacy and Security" title="Direct link to Privacy and Security" translate="no">​</a></h2>
