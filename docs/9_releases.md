@@ -2,6 +2,50 @@
 sidebar_position: 8
 title: Release Notes
 ---
+## Version 1.4.0 — The “Wow, That’s a Lot of Icons” Release
+
+16 November 2025
+
+This release is basically a glow-up for your entire workflow. ManagerDash went to the spa, got a new wardrobe, and came back with opinions. Here’s what you’ll notice:
+
+🌱 Goals Get Serious (But Still Friendly)
+	•	Career goals are officially first-class citizens. You can now create, track, and report on them separately from development goals—because becoming a Principal Engineer is not a two-week sprint.
+	•	Milestones look sharper and behave better when dragged, sorted, or stared at in frustration.
+	•	Cleaner UI cues: target dates automatically hide for career goals, action buttons only show where they make sense, and the empty states finally look like they were designed on purpose.
+
+🧠 Feedback, but Make It Delightful
+	•	New and more consistent feedback statuses, types, and tag styles that help you quickly see what’s what.
+	•	PR Review Panel now has the option to provide feedback, and remembers your context, so you don’t lose your place mid-thought.
+	•	Notes get real behavior instead of floating around like confused post-its.
+	•	Saved Reviews button hides itself when there’s… nothing saved.
+
+👥 Teams & Contributors (Now With More Personality)
+	•	Contributors everywhere (formerly “aliases”—we’ve grown).
+	•	Random colors when adding people, for just the right sprinkle of chaos.
+	•	Custom empty states for teams and dashboards, now with expressive icons that you can ejoy while you solve the problem of being understaffed.
+
+🖼 Icons. All. The. Icons.
+
+The SVG rebellion is complete.
+Everywhere you looked before (goals, feedback, reports, dashboards, modals) -- boom, icons now.
+Your retinas will thank you.
+
+📊 Reports Actually Tell You Stuff Now
+	•	Career vs. development goals are cleanly separated.
+	•	Visual hierarchy is improved so you can skim like a boss.
+	•	PR titles show correctly. (We know. It was time.)
+
+🧪 Misc. Goodies
+	•	Tooltips that actually behave inside their bounding boxes instead of running off screen like toddlers in a grocery store.
+
+🔑 Licensing & Support
+	•	Better version checking.
+	•	More helpful activation experiences.
+
+⸻
+
+If you feel like everything suddenly looks cleaner, flows better, and gently nudges you toward being a more organized manager—you’re not imagining it. That’s v1.4.0 at work.
+
 ## Version 1.3.0 🔐
 
 **Enhanced License Management**
@@ -29,7 +73,7 @@ Version 1.0.0 marks the official launch of ManagerDash, bringing together a comp
 
 #### 📊 **Multi-Dimensional Team Visibility**
 - **Team Dashboard**: Get a bird's-eye view of your entire organization with customizable team layouts
-- **Alias Dashboard**: Manage team member profiles with color-coded tags, initials, and drag-and-drop team assignment
+- **Contributor Dashboard**: Manage team member profiles with color-coded tags, initials, and drag-and-drop team assignment
 - **Individual Reports**: Generate detailed individual performance reports combining skills, goals, and contributions
 
 #### 🎯 **Goals & Milestones**

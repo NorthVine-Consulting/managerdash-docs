@@ -30,7 +30,7 @@ const appImages: AppImage[] = [
     link: '/docs/teams_and_people#team-dashboard',
   },
   {
-    title: 'Alias Dashboard',
+    title: 'Contributor Dashboard',
     description: 'Individual contributor dashboard',
     src: '/img/app_img/alias_dashboard_light.png',
     category: 'Dashboard',

@@ -232,7 +232,7 @@ Drives projects. Influences team decisions. Handles complex problems.
 2. Find the level you want to edit
 3. Click **Edit** icon/button next to it
 4. Update the fields:
-   - Code (be careful - affects existing aliases)
+   - Code (be careful - affects existing contributor)
    - Title (safe to change)
    - Description (safe to change)
 5. Click **Save**
@@ -291,7 +291,7 @@ Drives projects. Influences team decisions. Handles complex problems.
 
 ### When Adding a New Person
 
-1. Click **"+ Add Alias"** in sidebar
+1. Click **"+ Add Contributor"** in sidebar
 2. Fill in Name, GitHub, etc.
 3. Find **Seniority Level** dropdown
 4. Select appropriate level (or leave blank)

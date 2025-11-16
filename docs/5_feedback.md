@@ -19,10 +19,10 @@ Feedback in ManagerDash helps you:
 
 - **Content**: The feedback text (required)
 - **Author**: Who provided the feedback (required)
-- **Type**: Positive or Constructive (optional)
+- **Type**: Positive, Constructive, or Note (optional)
 - **Visibility**: Private, Team, or Public (optional)
 - **Tags**: Comma-separated keywords for organization
-- **Status**: Preparing (draft) or Delivered
+- **Status**: Preparing (draft), Delivered, or New (for recently added items)
 - **Date**: Automatically tracked (created and updated)
 
 ## Adding Feedback
@@ -112,6 +112,12 @@ When editing feedback, clicking outside the edit area automatically cancels and 
 - Shows yellow alert icon (!)
 - Use for: areas to develop, coaching points
 
+**Note**:
+- General observations or information
+- Neutral documentation
+- Context for future reference
+- Status automatically set appropriately for notes
+
 **No Type**:
 - General observations
 - Neutral feedback
@@ -194,6 +200,15 @@ Use multiple filters together:
 - Filters narrow results progressively
 
 ## Feedback Status
+
+### New
+
+**Purpose**: Recently added feedback that hasn't been processed yet
+
+**Uses**:
+- Automatically assigned to newly created feedback
+- Helps identify items that need attention
+- Temporary state before categorization
 
 ### Preparing (Drafts)
 

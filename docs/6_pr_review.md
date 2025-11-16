@@ -19,8 +19,8 @@ The PR Review feature helps you:
 ### Prerequisites
 
 To use PR Review, you need:
-- GitHub username configured for the person (in their alias profile)
-- GitHub Personal Access Token (configured in Settings → Preferences)
+- GitHub username configured for the person (in their contributor profile)
+- GitHub Personal Access Token (configured in Settings → Configuration)
 - Internet connection to fetch from GitHub
 
 ## Setting Up GitHub Integration
@@ -96,7 +96,7 @@ Here are a few other reasons why you may mark a PR as a feedback opportunity:
 - Incomplete testing or documentation
 - Breaks existing functionality/needs to be reverted
 
-When you mark a PR as a Feedback Opportunity, your notes will also be recorded as pending feedback.
+When you mark a PR as a Feedback Opportunity, your notes will be automatically recorded as pending feedback in the person's Feedback tab, preserving the context of the PR review.
 
 **Meeting Expectations (=)**:
 A PR is Meeting Expectations if it is a good representation of the contribution expected from an engineer at any level. What is defined as quality contributions will vary between companies and teams, but some examples of contributions that meet expectations are:
@@ -145,9 +145,12 @@ Notes help you:
 
 1. Rate the PR first (select a circle)
 2. A text area appears below the PR
-3. Type your notes
-4. Notes save automatically after 500ms
-5. No "Save" button needed
+3. Optionally, specify the **Author** of the feedback (defaults to you if left blank)
+4. Type your notes
+5. Notes save automatically after 500ms
+6. No "Save" button needed
+
+**Note**: The PR title and your review context are automatically preserved when creating feedback from PR reviews, making it easy to reference specific contributions later.
 
 ### What to Include in Notes
 
@@ -267,7 +270,7 @@ Reports include:
 ### No PRs Found
 **Problem**: Fetch returns no results
 **Solution**:
-- Verify GitHub username is correct in alias profile
+- Verify GitHub username is correct in contributor profile
 - Check date range (too narrow?)
 - Ensure person authored PRs in that period
 - Verify GitHub token is valid
@@ -276,7 +279,7 @@ Reports include:
 ### Can't Fetch PRs
 **Problem**: "Failed to fetch" error
 **Solution**:
-- Check GitHub token in Preferences
+- Check GitHub token in Configuration
 - Verify token has correct permissions
 - Check internet connection
 - Try refreshing the app
@@ -304,7 +307,7 @@ Reports include:
 - Regenerate token on GitHub
 - Ensure correct scopes selected
 - Copy entire token (no spaces)
-- Save in Preferences
+- Save in Configuration
 - Try fetching again
 
 ## Privacy and Security

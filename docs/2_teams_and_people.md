@@ -5,15 +5,15 @@ title: Configuring your team
 
 # Teams and People Management
 
-<img src={require('@site/static/img/app_img/alias_dashboard_light.png').default} alt="Alias Dashboard" style={{float: 'right', marginLeft: '20px', marginBottom: '20px', maxWidth: '400px'}} />
+<img src={require('@site/static/img/app_img/alias_dashboard_light.png').default} alt="Contributor Dashboard" style={{float: 'right', marginLeft: '20px', marginBottom: '20px', maxWidth: '400px'}} />
 
 This guide covers how to add, organize, and manage teams and individuals in ManagerDash.
 
-## Understanding Aliases
+## Understanding Contributors
 
-In ManagerDash, individuals are called "Aliases". Each alias represents a person you manage or work with.
+In ManagerDash, individuals are called "Contributors". Each contributor represents a person you manage or work with.
 
-### Alias Properties
+### Contributor Properties
 
 - **Name**: Full name of the person (required)
 - **GitHub Handle**: GitHub username (required for PR integration)
@@ -25,7 +25,7 @@ In ManagerDash, individuals are called "Aliases". Each alias represents a person
 
 ### From the Sidebar
 
-1. Click the **"+ Add Alias"** button in the sidebar
+1. Click the **"+ Add Contributor"** button in the sidebar
 2. Fill in the form:
    - **Name**: Enter the person's full name
    - **Initials**: (Optional) Enter 2-3 letters
@@ -118,7 +118,7 @@ Use drag-and-drop to assign people:
 
 ### Sidebar Sections
 
-1. **Action Buttons**: Add Team and Add Alias
+1. **Action Buttons**: Add Team and Add Contributor
 2. **Teams**: All teams with their members
 3. **Unassigned**: People not on any team
 4. **Settings**: At the bottom (Preferences, Manage Teams, Export Data)
@@ -195,7 +195,7 @@ Go to Settings → Manage Teams to configure:
 ## Common Issues
 
 ### Duplicate GitHub Handle Error
-**Problem**: "An alias with this GitHub handle already exists"
+**Problem**: "A contributor with this GitHub handle already exists"
 **Solution**: Each GitHub handle must be unique. Check existing people or use a different handle.
 
 ### Team Name Conflict
