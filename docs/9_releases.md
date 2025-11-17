@@ -2,6 +2,27 @@
 sidebar_position: 8
 title: Release Notes
 ---
+
+## 🚦 ManagerDash v1.5.0 — The “Wait, This Feels Nicer” Release
+
+17 November 2025
+
+Lots of tiny tweaks, big reduction in “why is this weird?” moments.
+
+🌱 Goals Behave Themselves
+	•	Older goals without a type now gracefully fall back to “Development”, instead of getting confused and breaking your flow.
+	•	Net effect: fewer surprises, no mystery states, and your existing data keeps working.
+
+💬 Feedback & Dashboard, De-Cluttered
+	•	The “Edit” option only shows up when feedback is actually editable, so you’re not clicking into dead ends.
+	•	“Mark as delivered” now lives inside the action menu, right where you’d expect it.
+	•	The Recent Feedback section on the dashboard is simplified, making it easier to scan and act instead of hunting for the right button.
+	•	Icons are cleaned up and unified, so type indicators and feedback visuals feel coherent instead of “whatever we had lying around.”
+
+🧼 Tiny UI Polish, Noticeable Calm
+	•	Headings and sections (like Recent) get a bit more breathing room, making the layout feel less cramped.
+	•	Small spacing and clarity tweaks across the dashboard make it easier to read at a glance between meetings.
+
 ## Version 1.4.0 — The “Wow, That’s a Lot of Icons” Release
 
 16 November 2025
