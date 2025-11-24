@@ -19,10 +19,11 @@ Feedback in ManagerDash helps you:
 
 - **Content**: The feedback text (required)
 - **Author**: Who provided the feedback (required)
-- **Type**: Positive, Constructive, or Note (optional)
+- **Type**: Note or Feedback - distinguishes personal notes from feedback intended for delivery (default: Note)
+- **Vibe**: Positive, Constructive, or Neutral - the sentiment/tone (only for feedback items)
+- **State**: None, Pending, or Delivered - the delivery lifecycle status
 - **Visibility**: Private, Team, or Public (optional)
 - **Tags**: Comma-separated keywords for organization
-- **Status**: Preparing (draft), Delivered, or New (for recently added items)
 - **Date**: Automatically tracked (created and updated)
 
 ## Adding Feedback
@@ -33,11 +34,15 @@ The Home Dashboard provides a fast way to add feedback:
 
 1. From the Home screen, find **"Quick Add Feedback"** panel
 2. Select the **Person** from dropdown
-3. Choose **Status**:
-   - **Preparing (Draft)**: Save for later delivery
-   - **Delivered**: Already shared with the person
-4. Enter feedback in the **Content** field
-5. Click **"Save Feedback"**
+3. Choose **Type**:
+   - **Note**: Personal observation or reminder (default)
+   - **Feedback**: Feedback ready to be shared
+4. If you selected **Feedback**, choose **Vibe**:
+   - **Positive**: Praise, recognition, things going well
+   - **Constructive**: Areas for improvement, coaching
+   - **Neutral**: Objective observations
+5. Enter feedback in the **Content** field
+6. Click **"Save Feedback"**
 
 ### From Individual's Feedback Panel
 
@@ -47,9 +52,10 @@ For more detailed feedback entry:
 2. Click the **Feedback** tab
 3. Click **"+ Add Feedback"** button
 4. Fill in the form:
-   - **Author**: Your name or feedback source
-   - **Content**: The feedback text
-   - **Type**: Positive, Constructive, or leave blank
+   - **Source**: Your name or feedback source (defaults to "manager")
+   - **Content**: The feedback text (required)
+   - **Type**: Note or Feedback (defaults to Note)
+   - **Vibe**: Positive, Constructive, or Neutral (only shown when Type is Feedback)
    - **Visibility**: Private, Team, Public, or leave blank
    - **Tags**: Comma-separated (e.g., "code review, collaboration")
 5. Click **Save**
@@ -61,13 +67,13 @@ ManagerDash can automatically generate feedback from your PR reviews:
 1. Navigate to a person's **PR Review** tab
 2. Review a pull request and evaluate it
 3. When marking a PR as **"Feedback Opportunity"**:
-   - Feedback is automatically created in draft status
+   - Feedback is automatically created as feedback type with pending state
    - Content includes PR title, your review comments, and evaluation
    - Tagged automatically with "PR Review" and the PR number
-   - Status set to "Preparing (Draft)" for you to review before delivery
+   - State set to "Pending" for you to review before delivery
 4. Find the auto-generated feedback in:
    - The person's **Feedback** tab
-   - Your **Home Dashboard** under "Drafts"
+   - Your **Home Dashboard** under "Pending Feedback"
 5. Edit the feedback to refine before marking as delivered
 
 **Benefits**:
@@ -87,6 +93,16 @@ ManagerDash can automatically generate feedback from your PR reviews:
 5. Update any fields
 6. Click **Save** or **Cancel**
 
+### Adding Notes to Existing Feedback
+
+Starting in v1.6.0, you can add follow-up notes to feedback conversations:
+
+1. Find the feedback item you want to add a note to
+2. Click the **note icon** on the feedback row
+3. Enter your additional note or follow-up comment
+4. The note is added to the feedback conversation thread
+5. This helps track the evolution of feedback over time
+
 ### Keyboard Shortcuts While Editing
 
 - **Esc**: Cancel editing without saving
@@ -98,30 +114,54 @@ When editing feedback, clicking outside the edit area automatically cancels and 
 
 ## Organizing Feedback
 
-### Types
+### Item Types
 
-**Positive Feedback**:
+**Note** (default):
+- Personal observations or reminders
+- Not intended for immediate delivery
+- State automatically set to "None"
+- Vibe defaults to "Neutral"
+- Use for: capturing ideas, observations you may or may not share later
+
+**Feedback**:
+- Feedback ready to be or already shared with the person
+- State defaults to "Pending" when created
+- Requires choosing a vibe (positive, constructive, or neutral)
+- Can be marked as delivered when shared
+
+### Converting Between Types
+
+You can easily convert items between notes and feedback:
+
+**Note → Feedback**:
+1. Click the menu icon (⋯) on any note
+2. Select "Convert to Positive Feedback" or "Convert to Constructive Feedback"
+3. The item becomes feedback with the chosen vibe and "Pending" state
+
+**Feedback → Note**:
+1. Click the menu icon (⋯) on any feedback item
+2. Select "Convert to Note"
+3. The item becomes a note with neutral vibe and "None" state
+
+### Vibes (Sentiment)
+
+**Positive**:
 - Recognizes achievements
 - Highlights strengths
 - Shows green checkmark icon (✓)
 - Use for: accomplishments, growth, exemplary work
 
-**Constructive Feedback**:
+**Constructive**:
 - Identifies improvement areas
 - Provides developmental guidance
 - Shows yellow alert icon (!)
 - Use for: areas to develop, coaching points
 
-**Note**:
-- General observations or information
-- Neutral documentation
-- Context for future reference
-- Status automatically set appropriately for notes
-
-**No Type**:
-- General observations
-- Neutral feedback
-- Shows gray circle icon
+**Neutral**:
+- Objective observations
+- Balanced feedback
+- Shows thought bubble icon
+- Use for: neutral information, context without judgment
 
 ### Visibility Levels
 
@@ -176,9 +216,25 @@ Click **"Show Filters"** button to reveal filter controls:
 ### Type Filter
 
 Select from dropdown:
-- **All**: Show everything
+- **All Types**: Show everything
+- **Notes**: Only personal notes
+- **Feedback**: Only feedback items
+
+### Vibe Filter
+
+Select from dropdown:
+- **All Vibes**: Show all sentiments
 - **Positive**: Only positive feedback
 - **Constructive**: Only constructive feedback
+- **Neutral**: Only neutral items
+
+### State Filter
+
+Select from dropdown:
+- **All States**: Show all delivery states
+- **Draft**: Items not tracked for delivery (notes)
+- **Pending**: Feedback ready to deliver but not yet shared
+- **Delivered**: Feedback already shared with the person
 
 ### Visibility Filter
 
@@ -196,35 +252,43 @@ Select from dropdown:
 ### Combine Filters
 
 Use multiple filters together:
-- Example: "Positive + Team + Tagged 'presentation'"
-- Filters narrow results progressively
+- Example: "Feedback + Positive + Pending + Tagged 'presentation'"
+- Example: "Notes + Neutral + Tagged 'code review'"
+- Filters narrow results progressively across all dimensions
 
-## Feedback Status
+## Delivery States
 
-### New
+### None
 
-**Purpose**: Recently added feedback that hasn't been processed yet
-
-**Uses**:
-- Automatically assigned to newly created feedback
-- Helps identify items that need attention
-- Temporary state before categorization
-
-### Preparing (Drafts)
-
-**Purpose**: Feedback you're still working on
+**Purpose**: Items not tracked for delivery (personal notes)
 
 **Uses**:
-- Capture thoughts immediately
+- Default state for notes
+- Personal observations
+- Ideas you may or may not share later
+- Reference material
+
+**Actions**:
+- **Convert to Feedback**: Transform into deliverable feedback (state becomes "Pending")
+- **Edit**: Update content anytime
+- **Delete**: Remove if no longer relevant
+
+### Pending
+
+**Purpose**: Feedback ready to deliver but not yet shared
+
+**Uses**:
+- Capture feedback immediately
 - Refine before delivery
 - Prepare for scheduled 1-on-1s
 - Collect examples over time
 
-**Location**: Appears in "Drafts" section on Home Dashboard
+**Location**: Appears in "Pending Feedback" section on Home Dashboard and Feedback tab
 
 **Actions**:
-- **Mark Delivered**: Click button to move to delivered
+- **Mark as Delivered**: Click menu icon (⋯) and select "Mark as Delivered"
 - **Edit**: Refine before delivery
+- **Convert to Note**: Change your mind and keep as personal reference
 - **Delete**: Remove if no longer relevant
 
 ### Delivered
@@ -239,23 +303,28 @@ Use multiple filters together:
 
 **Location**: Appears in "Recent Feedback" on Home Dashboard and in Feedback tab
 
+**Actions**:
+- **View**: Review past feedback
+- **Convert to Note**: If you want to repurpose as reference material
+
 ## Deleting Feedback
 
 **⚠️ Warning**: Deletion is permanent and cannot be undone.
 
-1. Click the pencil icon to edit
-2. Click the **Delete** button (red)
-3. Confirm in the dialog
+1. Click the menu icon (⋯) on the feedback item
+2. Select **Delete** from the menu
+3. Confirm in the dialog if prompted
 
 ## Best Practices
 
 ### Capturing Feedback
 
-1. **Capture Immediately**: Add feedback when it happens
-2. **Be Specific**: Include concrete examples
-3. **Use Drafts**: Save partial feedback to complete later
-4. **Tag Consistently**: Develop a tagging system and stick to it
-5. **Note Source**: Always fill in Author field
+1. **Capture Immediately**: Add items when events happen
+2. **Start with Notes**: Capture observations as notes, convert to feedback later when ready
+3. **Be Specific**: Include concrete examples
+4. **Use Pending State**: Create feedback items and leave in pending until ready to deliver
+5. **Tag Consistently**: Develop a tagging system and stick to it
+6. **Note Source**: Always fill in Author field
 
 ### Writing Feedback
 
@@ -294,7 +363,8 @@ Use multiple filters together:
 - Mark PRs as "Feedback Opportunity" to auto-generate feedback
 - Auto-generated feedback includes PR context and your comments
 - Feedback tagged with "PR Review" and PR number
-- Review and refine auto-generated feedback before delivery
+- Created as feedback type with pending state
+- Review and refine auto-generated feedback before marking as delivered
 - Provides concrete examples for technical feedback
 
 **With Goals**:
@@ -318,10 +388,11 @@ Use multiple filters together:
 
 ```
 Monday: Review last week's work
-Monday: Add positive feedback as drafts
-Tuesday-Thursday: Add feedback as events happen
-Friday: Mark drafts as delivered after 1-on-1s
-Friday: Review and tag all week's feedback
+Monday: Capture observations as notes
+Tuesday-Thursday: Add notes as events happen
+Thursday: Convert important notes to feedback (pending state)
+Friday: Mark pending feedback as delivered after 1-on-1s
+Friday: Review and tag all week's items
 ```
 
 ### Performance Review Prep
@@ -338,11 +409,11 @@ After review: Add new feedback from discussion
 ### 1-on-1 Preparation
 
 ```
-Day before: Review person's drafts
-Day before: Mark most important for discussion
-During meeting: Pull up feedback tab
-During meeting: Mark drafts as delivered
-After meeting: Add any new feedback from discussion
+Day before: Review person's pending feedback
+Day before: Mark most important items for discussion
+During meeting: Pull up feedback tab (filter to pending)
+During meeting: Mark pending feedback as delivered
+After meeting: Add any new notes or feedback from discussion
 ```
 
 ### Team Recognition
@@ -358,15 +429,16 @@ After meeting: Add any new feedback from discussion
 ## Tips and Tricks
 
 1. **Quick Capture**: Use Home Dashboard quick add for speed
-2. **Batch Processing**: Review and edit multiple drafts at once
-3. **Search Power**: Use tags to find all feedback on a topic
-4. **Template Tags**: Develop consistent tags across team
-5. **Weekly Ritual**: Set aside time each week to capture feedback
-6. **Draft Everything**: When in doubt, save as draft
-7. **Be Prompt**: Capture within 24 hours while details are fresh
-8. **Edit Later**: Quick capture now, refine wording later
-9. **Use Filters**: Prepare for meetings by filtering to relevant feedback
-10. **Export Reports**: Generate comprehensive feedback summaries
+2. **Start with Notes**: Capture observations as notes, convert to feedback when ready to deliver
+3. **Batch Conversion**: Review notes weekly and convert important ones to pending feedback
+4. **Search Power**: Use tags to find all feedback on a topic
+5. **Template Tags**: Develop consistent tags across team
+6. **Weekly Ritual**: Set aside time each week to capture observations
+7. **Note Everything**: When in doubt, save as note and decide later
+8. **Be Prompt**: Capture within 24 hours while details are fresh
+9. **Edit Later**: Quick capture now, refine wording later
+10. **Use Three-Way Filters**: Combine Type + Vibe + State for powerful queries
+11. **Export Reports**: Generate comprehensive feedback summaries
 
 ## Common Issues
 
@@ -392,12 +464,13 @@ After meeting: Add any new feedback from discussion
 - Click outside the form area
 - Refresh the page if necessary
 
-### Drafts Not Showing
-**Problem**: Can't find draft feedback
+### Pending Feedback Not Showing
+**Problem**: Can't find pending feedback
 **Solution**:
-- Check Home Dashboard "Drafts" section
-- Verify status is "Preparing" not "Delivered"
-- Check the individual's Feedback tab
+- Check Home Dashboard "Pending Feedback" section
+- Verify state is "Pending" not "Delivered" or "None"
+- Check the individual's Feedback tab with State filter set to "Pending"
+- Make sure Type is "Feedback" not "Note"
 
 ### Auto-Save Not Working
 **Problem**: Changes aren't saving

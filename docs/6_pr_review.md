@@ -29,14 +29,27 @@ See "GitHub Token Setup" for instructions on how to generate a token and add it 
 
 ## Fetching Pull Requests
 
-### Basic Fetch
+### Auto-Fetch on Load
+
+Starting in v1.6.0, ManagerDash automatically fetches pull requests when you navigate to the PR Review tab:
 
 1. Select a person from the sidebar
 2. Click the **PR Review** tab
-3. Set the date range:
+3. The date range defaults to the last 7 days
+4. PRs are automatically fetched in the background
+5. A skeleton loading state shows while fetching
+6. PRs appear grouped by repository once loaded
+
+### Manual Fetch
+
+You can also manually trigger a fetch or refetch with different date ranges:
+
+1. Select a person from the sidebar
+2. Click the **PR Review** tab
+3. Adjust the date range if needed:
    - **Start Date**: Beginning of period
    - **End Date**: End of period (today by default)
-4. Click **"Fetch Pull Requests"**
+4. Click **"Fetch Pull Requests"** to refetch
 5. Wait for the fetch to complete (may take several seconds)
 6. PRs appear grouped by repository
 
@@ -96,7 +109,7 @@ Here are a few other reasons why you may mark a PR as a feedback opportunity:
 - Incomplete testing or documentation
 - Breaks existing functionality/needs to be reverted
 
-When you mark a PR as a Feedback Opportunity, your notes will be automatically recorded as pending feedback in the person's Feedback tab, preserving the context of the PR review.
+When you mark a PR as a Feedback Opportunity, your notes will be automatically created as feedback (type: feedback, state: pending) in the person's Feedback tab, preserving the context of the PR review and ready for you to deliver in your next 1-on-1.
 
 **Meeting Expectations (=)**:
 A PR is Meeting Expectations if it is a good representation of the contribution expected from an engineer at any level. What is defined as quality contributions will vary between companies and teams, but some examples of contributions that meet expectations are:

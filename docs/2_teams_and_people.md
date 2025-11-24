@@ -123,6 +123,18 @@ Use drag-and-drop to assign people:
 3. **Unassigned**: People not on any team
 4. **Settings**: At the bottom (Preferences, Manage Teams, Export Data)
 
+### Notification Indicators
+
+Starting in v1.6.0, the sidebar shows visual notifications to help you stay on top of important tasks:
+
+**Pending Feedback Indicator:**
+- A badge appears next to a person's name if they have pending feedback
+- Helps you quickly identify who has feedback ready to deliver
+- Click on the person to view and manage their pending feedback
+- The indicator disappears once feedback is marked as delivered or converted to notes
+
+This makes it easier to track which team members have feedback awaiting your attention during 1-on-1s.
+
 ## Team Dashboard
 
 When you select a team, you see:

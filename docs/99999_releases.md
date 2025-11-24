@@ -1,7 +1,70 @@
 ---
-sidebar_position: 8
 title: Release Notes
 ---
+
+## 🚦 ManagerDash v1.6.0 — The “We Cleaned Up Everything Except Your Inbox” Edition
+
+This update is big. Like, “did we accidentally refactor the entire app?” big.
+Turns out… yes. Yes we did.
+
+Below is a curated highlight reel of what’s new, improved, polished, and duct-taped back together for your managerial delight.
+
+🔔 Reminders! Reminding you of things since November 2025
+
+You can now create customizable reminders so you stop waking up at 3am remembering that you owe someone feedback from three quarters ago. Your future self says: “Finally.”
+
+🔄 PR Auto-Fetching (Because clicking is for mortals)
+
+ManagerDash now automatically fetches your open PRs and shows a classy skeleton loader while it thinks.
+Perfect for moments when you want to feel productive without actually doing anything.
+
+🧭 Navigation that behaves like it should
+
+Move backwards and forwards in your journey like you have a time-turner.
+Tabs stay where they belong. Active states don’t disappear.
+It’s stable. It’s predictable. It’s… unnervingly functional.
+
+🏠 A Home Dashboard That Actually Feels Like Home
+
+A cleaner layout, summary cards, team goals, milestones… it’s basically an HGTV makeover but for your management brain. Welcome home.
+
+📝 Feedback Notes That Don’t Gaslight You
+
+Add notes to feedback conversations, with a cleaned-up state machine so your drafts stop going rogue.
+Finally: clarity AND closure.
+
+🔐 Token Handling: Now With 100% Less “Why Aren’t You Working?”
+
+Robust storage. Better fallback. Helpful error messages.
+This is the healthiest relationship you’ve ever had with a token.
+
+🧪 GitHub Enterprise Support
+
+If your company uses GHE, this release is going to unlock all of the PR review goodness.
+
+🧹 Dashboard & Feedback Glow-Up
+	•	Cleaner headings
+	•	Consolidated lists
+	•	Better alignment
+	•	Fewer weird spacing decisions
+Basically: polished until it sparkles.
+
+📬 Sidebar Notifications (Your new accountability buddy)
+
+Constibutors with pending feedback now politely tap you on the shoulder.
+It’s helpful, not naggy. Mostly.
+
+✨ In Summary
+
+This update:
+	•	Works better
+	•	Looks better
+	•	Breaks fewer things
+	•	Helps you be the organized manager you pretend to be on LinkedIn
+
+If you’ve ever wished ManagerDash felt just a bit more like an actual product, this is the one to download.
+
+Go forth. Update boldly. Manage dash-ingly.
 
 ## 🚦 ManagerDash v1.5.0 — The “Wait, This Feels Nicer” Release
 

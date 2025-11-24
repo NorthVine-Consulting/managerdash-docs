@@ -1,5 +1,4 @@
 ---
-sidebar_position: 7
 title: Tips and Best Practices
 ---
 
@@ -449,6 +448,29 @@ PRs:
 - Respect individual privacy
 
 ## Troubleshooting Patterns
+
+### Technical Issues
+
+**"Error decrypting GitHub token" or "Failed to decrypt"**
+
+This error typically occurs after:
+- System updates or macOS upgrades
+- Reinstalling or upgrading ManagerDash
+- Moving your data to a new computer
+- macOS keychain changes
+
+**Why it happens:**
+ManagerDash uses your operating system's secure storage (macOS Keychain) to encrypt your GitHub token and license key. When the encryption keys change (due to system updates or app reinstallation), the old encrypted data can no longer be decrypted.
+
+**Solution:**
+1. Go to **Preferences/Settings**
+2. Click **Delete** next to your GitHub token
+3. Re-enter your GitHub token
+4. Click **Save**
+
+Your token will be re-encrypted with the current system keychain. This is a one-time fix per system change.
+
+**Note:** Your data is safe! The app stores migration metadata when decryption fails, so nothing is lost. You just need to re-enter your credentials once.
 
 ### Common Workflow Issues
 

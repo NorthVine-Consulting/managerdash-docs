@@ -130,7 +130,25 @@ This is the most important step. You need to grant specific permissions:
 3. Click the **Settings** (gear icon) button
 4. Click **Preferences** from the menu
 
-### Step 2: Enter Token
+### Step 2: Select GitHub Server Type
+
+ManagerDash supports both GitHub.com and GitHub Enterprise:
+
+1. Find the **GitHub Server** section
+2. Select your server type:
+   - **GitHub.com**: For public GitHub (most common)
+   - **GitHub Enterprise**: For your company's self-hosted GitHub instance
+
+**If you selected GitHub.com:**
+- Skip to Step 3 below
+
+**If you selected GitHub Enterprise:**
+- Enter your **Enterprise Server URL** in the field that appears
+- Example: `https://github.yourcompany.com`
+- Do NOT include `/api/v3` - it will be added automatically
+- This should be your company's GitHub Enterprise base URL
+
+### Step 3: Enter Token
 
 1. Find the **GitHub Token** or **GitHub Personal Access Token** field
 2. Click in the field
@@ -138,9 +156,9 @@ This is the most important step. You need to grant specific permissions:
 4. Verify the entire token is pasted
    - Should start with `ghp_`
    - Should be fairly long (around 40+ characters)
-5. Click **Save** or **Apply** button
+5. Click **Save** or **Save Configuration** button
 
-### Step 3: Verify Token Works
+### Step 4: Verify Token Works
 
 1. Select a person with a GitHub username configured
 2. Click the **PR Review** tab
@@ -262,12 +280,66 @@ GitHub tokens expire based on the expiration date you set. When this happens:
 - Don't fetch PRs too frequently
 - Consider using different token if needed
 
+### GitHub Enterprise Issues
+
+**Problem**: "GitHub Enterprise URL not configured" error
+
+**Solutions:**
+
+1. **Verify server selection:**
+   - Open ManagerDash Preferences
+   - Check that "GitHub Enterprise" radio button is selected
+   - Verify the Enterprise Server URL field is visible
+
+2. **Check URL format:**
+   - Should be `https://github.yourcompany.com` (or similar)
+   - Do NOT include `/api/v3` at the end
+   - Do NOT include trailing slashes
+   - Must start with `http://` or `https://`
+
+3. **Verify URL is correct:**
+   - Copy the URL from your browser when visiting your company's GitHub
+   - Remove any path segments (like `/dashboard` or `/repos`)
+   - Use just the base URL
+   - Example: If you visit `https://github.acme.com/dashboard`, use `https://github.acme.com`
+
+4. **Test Enterprise access:**
+   - Open your Enterprise URL in a browser
+   - Verify you can log in
+   - Check that you have access to the repositories
+   - Ensure the server is online and accessible
+
+5. **Check token permissions:**
+   - Token must be generated from your GitHub Enterprise instance
+   - Cannot use GitHub.com token for Enterprise (or vice versa)
+   - Verify token has correct scopes for Enterprise
+
+**Problem**: Can't fetch PRs from Enterprise
+
+**Solutions:**
+
+1. **Verify token source:**
+   - Token must be from your Enterprise instance
+   - Generate token at: `https://your-enterprise-url/settings/tokens`
+   - NOT from github.com
+
+2. **Check network access:**
+   - Enterprise server must be accessible from your machine
+   - May need VPN if Enterprise is internal
+   - Test by opening Enterprise URL in browser
+
+3. **Verify API access:**
+   - Some Enterprise instances may have API disabled
+   - Check with your GitHub Enterprise administrator
+   - Verify your account has API access permissions
+
 ### Token Compromised
 
 **If you think your token was exposed:**
 
 **Immediate Actions:**
 1. Go to GitHub → Settings → Developer settings → Personal access tokens
+   - For Enterprise: `https://your-enterprise-url/settings/tokens`
 2. Find the compromised token
 3. Click **Delete** button
 4. Confirm deletion
@@ -383,6 +455,21 @@ A: ManagerDash currently requires Personal Access Tokens. GitHub Apps aren't sup
 
 **Q: Is my token stored securely in ManagerDash?**
 A: Yes. ManagerDash stores the token locally using Electron's secure storage. It's never transmitted anywhere except to GitHub's API.
+
+**Q: Does ManagerDash support GitHub Enterprise?**
+A: Yes! ManagerDash supports both GitHub.com and GitHub Enterprise Server. Select your server type in Preferences and enter your Enterprise URL.
+
+**Q: Can I use the same token for GitHub.com and GitHub Enterprise?**
+A: No. You must generate separate tokens from each instance. A token from GitHub.com won't work with Enterprise, and vice versa.
+
+**Q: How do I generate a token for GitHub Enterprise?**
+A: Follow the same steps as for GitHub.com, but start at your Enterprise URL: `https://your-enterprise-url/settings/tokens`. The process is identical.
+
+**Q: What if my GitHub Enterprise instance is behind a VPN?**
+A: ManagerDash will work as long as your machine has network access to the Enterprise server. Make sure you're connected to your VPN before fetching PRs.
+
+**Q: Can I switch between GitHub.com and Enterprise?**
+A: Yes! Simply change the server type in Preferences and update your token. Each configuration is saved independently.
 
 ## Summary Checklist
 

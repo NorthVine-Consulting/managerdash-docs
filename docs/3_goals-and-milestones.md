@@ -275,9 +275,30 @@ Goal: "Launch Mobile App v2.0"
 └─ Milestone: Production release (July 1)
 ```
 
+## Dashboard Integration
+
+Starting in v1.6.0, goals and milestones are more prominently featured on the Home Dashboard:
+
+### Milestone Summaries
+
+The Home Dashboard now shows milestone summaries for active goals:
+- Quick overview of goal progress across your team
+- Visual indicators for milestone completion status
+- Links to individual goal details
+- Highlights goals that need attention or are blocked
+
+### Summary Cards
+
+The dashboard includes summary cards that show:
+- Total active goals across your team
+- Overall milestone completion percentage
+- Goals approaching their target dates
+- Blocked goals that need intervention
+
 ## Reporting
 
 Goals and milestones appear in:
+- **Home Dashboard**: Quick summaries and milestone status
 - **Individual Reports**: Personal achievement summaries with career and development goals separated
 - **Team Reports**: Collective progress overview
 - **Markdown Exports**: Detailed goal breakdowns with progress metrics
