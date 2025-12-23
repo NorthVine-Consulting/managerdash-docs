@@ -5,8 +5,8 @@
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Configuring your team | ManagerDash Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://docs.manager-dash.com/docs/teams_and_people"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Configuring your team | ManagerDash Docs"><meta data-rh="true" name="description" content="This guide covers how to add, organize, and manage teams and individuals in ManagerDash."><meta data-rh="true" property="og:description" content="This guide covers how to add, organize, and manage teams and individuals in ManagerDash."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://docs.manager-dash.com/docs/teams_and_people"><link data-rh="true" rel="alternate" href="http://docs.manager-dash.com/docs/teams_and_people" hreflang="en"><link data-rh="true" rel="alternate" href="http://docs.manager-dash.com/docs/teams_and_people" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Configuring your team","item":"http://docs.manager-dash.com/docs/teams_and_people"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="ManagerDash Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="ManagerDash Docs Atom Feed"><link rel="stylesheet" href="/assets/css/styles.2edfd107.css">
-<script src="/assets/js/runtime~main.3c99a4a7.js" defer="defer"></script>
-<script src="/assets/js/main.7aa48039.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2d75c9e8.js" defer="defer"></script>
+<script src="/assets/js/main.ad7b2b23.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -113,6 +113,112 @@
 <li>Team members appear as colored circles with initials</li>
 <li>Click to expand and see details</li>
 </ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sentiment-analysis">Sentiment Analysis<a href="#sentiment-analysis" class="hash-link" aria-label="Direct link to Sentiment Analysis" title="Direct link to Sentiment Analysis" translate="no">​</a></h2>
+<p>Starting in v1.7.0, ManagerDash includes sentiment tracking to help you monitor team member mood and satisfaction over time.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-sentiment">Understanding Sentiment<a href="#understanding-sentiment" class="hash-link" aria-label="Direct link to Understanding Sentiment" title="Direct link to Understanding Sentiment" translate="no">​</a></h3>
+<p>Sentiment tracking allows you to record quick check-ins on how team members are feeling. This helps you:</p>
+<ul>
+<li>Identify trends in team morale</li>
+<li>Spot potential issues early</li>
+<li>Track the impact of organizational changes</li>
+<li>Maintain regular emotional check-ins with your team</li>
+</ul>
+<p><strong>The 3-Point Scale:</strong></p>
+<ul>
+<li><strong>Sad</strong> (Red) - Team member is experiencing low mood or dissatisfaction</li>
+<li><strong>Neutral</strong> (Blue) - Team member is in a middle-ground state</li>
+<li><strong>Happy</strong> (Green) - Team member is feeling positive and satisfied</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="recording-sentiment">Recording Sentiment<a href="#recording-sentiment" class="hash-link" aria-label="Direct link to Recording Sentiment" title="Direct link to Recording Sentiment" translate="no">​</a></h3>
+<p>Sentiment is recorded from the individual contributor dashboard.</p>
+<p><strong>How to Record:</strong></p>
+<ol>
+<li>Select a team member from the sidebar</li>
+<li>On their dashboard, find the <strong>&quot;Record Sentiment&quot;</strong> form in the right sidebar</li>
+<li>Click one of the three sentiment buttons:<!-- -->
+<ul>
+<li>Sad face icon (red)</li>
+<li>Neutral face icon (blue)</li>
+<li>Happy face icon (green)</li>
+</ul>
+</li>
+<li>Optionally, add context in the text field: &quot;what&#x27;s driving this sentiment?&quot;</li>
+<li>Click <strong>Save Sentiment</strong></li>
+<li>The form clears and the sentiment is recorded</li>
+</ol>
+<p><strong>Context Field:</strong>
+The optional context field lets you add notes about what&#x27;s affecting the person&#x27;s mood:</p>
+<ul>
+<li>&quot;Team morale is high after successful launch&quot;</li>
+<li>&quot;Dealing with burnout from long hours&quot;</li>
+<li>&quot;Excited about new project assignment&quot;</li>
+<li>&quot;Frustrated with technical blockers&quot;</li>
+</ul>
+<p>This context helps you remember what was happening during each check-in.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-sentiment-chart">Team Sentiment Chart<a href="#team-sentiment-chart" class="hash-link" aria-label="Direct link to Team Sentiment Chart" title="Direct link to Team Sentiment Chart" translate="no">​</a></h3>
+<p>The Team Sentiment Chart provides an aggregate view of your team&#x27;s mood over time.</p>
+<p><strong>Location:</strong>
+Navigate to a team dashboard to see the Team Sentiment section.</p>
+<p><strong>Features:</strong></p>
+<ol>
+<li>
+<p><strong>Time Range Filter</strong></p>
+<ul>
+<li>Last 14 days</li>
+<li>Last 30 days (default)</li>
+<li>Last 90 days</li>
+<li>Filters all sentiment data to the selected time window</li>
+</ul>
+</li>
+<li>
+<p><strong>Average Sentiment Display</strong></p>
+<ul>
+<li>Large sentiment icon with color coding</li>
+<li>Numeric average (displayed to 2 decimal places)</li>
+<li>Interpretation label:<!-- -->
+<ul>
+<li>Average ≥ 2.5: <strong>Happy</strong> (green)</li>
+<li>Average ≥ 1.5: <strong>Neutral</strong> (blue)</li>
+<li>Average &lt; 1.5: <strong>Sad</strong> (red)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sentiment Breakdown</strong></p>
+<ul>
+<li>Three cards showing count and percentage for each sentiment level</li>
+<li>Visual distribution of team moods</li>
+<li>Helps identify if mood is consistent or varied</li>
+</ul>
+</li>
+</ol>
+<p><strong>Empty State:</strong>
+When no sentiment data exists for the selected time range, you&#x27;ll see a message encouraging you to start tracking team sentiment.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sentiment-reminders">Sentiment Reminders<a href="#sentiment-reminders" class="hash-link" aria-label="Direct link to Sentiment Reminders" title="Direct link to Sentiment Reminders" translate="no">​</a></h3>
+<p>ManagerDash can remind you to check in on team member sentiment.</p>
+<p><strong>How Reminders Work:</strong></p>
+<ul>
+<li>Default reminder window: 14 days (2 weeks)</li>
+<li>If you haven&#x27;t recorded sentiment for a team member within the window, a reminder appears</li>
+<li>Reminder message: &quot;Record sentiment for {name} because you haven&#x27;t checked in on their mood in {window}&quot;</li>
+<li>Reminders are configurable in the reminder rules settings</li>
+</ul>
+<p><strong>Managing Reminders:</strong></p>
+<ul>
+<li>Reminders appear on dashboards and in the reminders section</li>
+<li>Recording sentiment for a person clears their reminder</li>
+<li>You can customize the reminder frequency in Settings</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices-for-sentiment-tracking">Best Practices for Sentiment Tracking<a href="#best-practices-for-sentiment-tracking" class="hash-link" aria-label="Direct link to Best Practices for Sentiment Tracking" title="Direct link to Best Practices for Sentiment Tracking" translate="no">​</a></h3>
+<ol>
+<li><strong>Regular Cadence</strong>: Record sentiment weekly or bi-weekly during 1-on-1s</li>
+<li><strong>Use Context</strong>: Always add a note about what&#x27;s driving the sentiment</li>
+<li><strong>Look for Trends</strong>: Use the team chart to identify patterns over time</li>
+<li><strong>Act on Data</strong>: If sentiment drops, have a conversation to understand why</li>
+<li><strong>Privacy</strong>: Sentiment data is stored locally and only visible to you</li>
+<li><strong>Consistency</strong>: Track sentiment for all team members, not just those with issues</li>
+</ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="sidebar-navigation">Sidebar Navigation<a href="#sidebar-navigation" class="hash-link" aria-label="Direct link to Sidebar Navigation" title="Direct link to Sidebar Navigation" translate="no">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="collapsingexpanding">Collapsing/Expanding<a href="#collapsingexpanding" class="hash-link" aria-label="Direct link to Collapsing/Expanding" title="Direct link to Collapsing/Expanding" translate="no">​</a></h3>
 <ul>
@@ -149,6 +255,7 @@
 <ul>
 <li>Track team-level objectives</li>
 <li>Compare skills across team members</li>
+<li><strong>Team Sentiment</strong> - View average team mood with time-based filtering (v1.7.0)</li>
 <li>Generate team reports</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="individual-dashboard">Individual Dashboard<a href="#individual-dashboard" class="hash-link" aria-label="Direct link to Individual Dashboard" title="Direct link to Individual Dashboard" translate="no">​</a></h2>
@@ -166,6 +273,7 @@
 <li>Complete personal development tracking</li>
 <li>PR quality evaluation</li>
 <li>360° feedback collection</li>
+<li>Record sentiment check-ins with optional context notes (v1.7.0)</li>
 <li>Comprehensive reporting</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h2>
@@ -186,6 +294,7 @@
 <li>Create teams that match your org structure</li>
 <li>Keep team sizes manageable (5-10 people)</li>
 <li>Use descriptive team names</li>
+<li>Record sentiment regularly (weekly or bi-weekly) to track team morale trends and identify potential issues early</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="regular-maintenance">Regular Maintenance<a href="#regular-maintenance" class="hash-link" aria-label="Direct link to Regular Maintenance" title="Direct link to Regular Maintenance" translate="no">​</a></h3>
 <ul>
@@ -233,6 +342,7 @@
 <li><strong>Quick Access</strong>: Recently selected people/teams are easier to access</li>
 <li><strong>Keyboard Navigation</strong>: Use Tab to navigate through forms quickly</li>
 <li><strong>Bulk Setup</strong>: If adding many people, keep the form open and save repeatedly</li>
-</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/getting-started/skills-customization"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Skills Assessment Setup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/goals-and-milestones"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Goals and Milestones</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#understanding-contributors" class="table-of-contents__link toc-highlight">Understanding Contributors</a><ul><li><a href="#contributor-properties" class="table-of-contents__link toc-highlight">Contributor Properties</a></li></ul></li><li><a href="#adding-a-person" class="table-of-contents__link toc-highlight">Adding a Person</a><ul><li><a href="#from-the-sidebar" class="table-of-contents__link toc-highlight">From the Sidebar</a></li><li><a href="#from-the-home-dashboard" class="table-of-contents__link toc-highlight">From the Home Dashboard</a></li></ul></li><li><a href="#editing-a-person" class="table-of-contents__link toc-highlight">Editing a Person</a><ul><li><a href="#from-the-sidebar-1" class="table-of-contents__link toc-highlight">From the Sidebar</a></li><li><a href="#what-you-can-edit" class="table-of-contents__link toc-highlight">What You Can Edit</a></li></ul></li><li><a href="#deleting-a-person" class="table-of-contents__link toc-highlight">Deleting a Person</a></li><li><a href="#teams" class="table-of-contents__link toc-highlight">Teams</a><ul><li><a href="#creating-a-team" class="table-of-contents__link toc-highlight">Creating a Team</a></li><li><a href="#assigning-people-to-teams" class="table-of-contents__link toc-highlight">Assigning People to Teams</a></li><li><a href="#unassigning-from-a-team" class="table-of-contents__link toc-highlight">Unassigning from a Team</a></li><li><a href="#viewing-teams" class="table-of-contents__link toc-highlight">Viewing Teams</a></li></ul></li><li><a href="#sidebar-navigation" class="table-of-contents__link toc-highlight">Sidebar Navigation</a><ul><li><a href="#collapsingexpanding" class="table-of-contents__link toc-highlight">Collapsing/Expanding</a></li><li><a href="#sidebar-sections" class="table-of-contents__link toc-highlight">Sidebar Sections</a></li><li><a href="#notification-indicators" class="table-of-contents__link toc-highlight">Notification Indicators</a></li></ul></li><li><a href="#team-dashboard" class="table-of-contents__link toc-highlight">Team Dashboard</a><ul><li><a href="#top-navigation" class="table-of-contents__link toc-highlight">Top Navigation</a></li><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li></ul></li><li><a href="#individual-dashboard" class="table-of-contents__link toc-highlight">Individual Dashboard</a><ul><li><a href="#top-navigation-1" class="table-of-contents__link toc-highlight">Top Navigation</a></li><li><a href="#features-1" class="table-of-contents__link toc-highlight">Features</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#naming-conventions" class="table-of-contents__link toc-highlight">Naming Conventions</a></li><li><a href="#github-integration" class="table-of-contents__link toc-highlight">GitHub Integration</a></li><li><a href="#team-organization" class="table-of-contents__link toc-highlight">Team Organization</a></li><li><a href="#regular-maintenance" class="table-of-contents__link toc-highlight">Regular Maintenance</a></li></ul></li><li><a href="#seniority-levels" class="table-of-contents__link toc-highlight">Seniority Levels</a><ul><li><a href="#setting-up-levels" class="table-of-contents__link toc-highlight">Setting Up Levels</a></li><li><a href="#assigning-levels" class="table-of-contents__link toc-highlight">Assigning Levels</a></li></ul></li><li><a href="#common-issues" class="table-of-contents__link toc-highlight">Common Issues</a><ul><li><a href="#duplicate-github-handle-error" class="table-of-contents__link toc-highlight">Duplicate GitHub Handle Error</a></li><li><a href="#team-name-conflict" class="table-of-contents__link toc-highlight">Team Name Conflict</a></li><li><a href="#cant-see-person-after-adding" class="table-of-contents__link toc-highlight">Can&#39;t See Person After Adding</a></li><li><a href="#drag-and-drop-not-working" class="table-of-contents__link toc-highlight">Drag and Drop Not Working</a></li></ul></li><li><a href="#tips" class="table-of-contents__link toc-highlight">Tips</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/getting-started/getting-started">Getting Started</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 NorthVine Consulting.</div></div></div></footer></div>
+<li><strong>Sentiment Context</strong>: Use the sentiment context field to note what&#x27;s driving mood - helps identify patterns over time</li>
+</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/getting-started/skills-customization"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Skills Assessment Setup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/goals-and-milestones"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Goals and Milestones</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#understanding-contributors" class="table-of-contents__link toc-highlight">Understanding Contributors</a><ul><li><a href="#contributor-properties" class="table-of-contents__link toc-highlight">Contributor Properties</a></li></ul></li><li><a href="#adding-a-person" class="table-of-contents__link toc-highlight">Adding a Person</a><ul><li><a href="#from-the-sidebar" class="table-of-contents__link toc-highlight">From the Sidebar</a></li><li><a href="#from-the-home-dashboard" class="table-of-contents__link toc-highlight">From the Home Dashboard</a></li></ul></li><li><a href="#editing-a-person" class="table-of-contents__link toc-highlight">Editing a Person</a><ul><li><a href="#from-the-sidebar-1" class="table-of-contents__link toc-highlight">From the Sidebar</a></li><li><a href="#what-you-can-edit" class="table-of-contents__link toc-highlight">What You Can Edit</a></li></ul></li><li><a href="#deleting-a-person" class="table-of-contents__link toc-highlight">Deleting a Person</a></li><li><a href="#teams" class="table-of-contents__link toc-highlight">Teams</a><ul><li><a href="#creating-a-team" class="table-of-contents__link toc-highlight">Creating a Team</a></li><li><a href="#assigning-people-to-teams" class="table-of-contents__link toc-highlight">Assigning People to Teams</a></li><li><a href="#unassigning-from-a-team" class="table-of-contents__link toc-highlight">Unassigning from a Team</a></li><li><a href="#viewing-teams" class="table-of-contents__link toc-highlight">Viewing Teams</a></li></ul></li><li><a href="#sentiment-analysis" class="table-of-contents__link toc-highlight">Sentiment Analysis</a><ul><li><a href="#understanding-sentiment" class="table-of-contents__link toc-highlight">Understanding Sentiment</a></li><li><a href="#recording-sentiment" class="table-of-contents__link toc-highlight">Recording Sentiment</a></li><li><a href="#team-sentiment-chart" class="table-of-contents__link toc-highlight">Team Sentiment Chart</a></li><li><a href="#sentiment-reminders" class="table-of-contents__link toc-highlight">Sentiment Reminders</a></li><li><a href="#best-practices-for-sentiment-tracking" class="table-of-contents__link toc-highlight">Best Practices for Sentiment Tracking</a></li></ul></li><li><a href="#sidebar-navigation" class="table-of-contents__link toc-highlight">Sidebar Navigation</a><ul><li><a href="#collapsingexpanding" class="table-of-contents__link toc-highlight">Collapsing/Expanding</a></li><li><a href="#sidebar-sections" class="table-of-contents__link toc-highlight">Sidebar Sections</a></li><li><a href="#notification-indicators" class="table-of-contents__link toc-highlight">Notification Indicators</a></li></ul></li><li><a href="#team-dashboard" class="table-of-contents__link toc-highlight">Team Dashboard</a><ul><li><a href="#top-navigation" class="table-of-contents__link toc-highlight">Top Navigation</a></li><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li></ul></li><li><a href="#individual-dashboard" class="table-of-contents__link toc-highlight">Individual Dashboard</a><ul><li><a href="#top-navigation-1" class="table-of-contents__link toc-highlight">Top Navigation</a></li><li><a href="#features-1" class="table-of-contents__link toc-highlight">Features</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#naming-conventions" class="table-of-contents__link toc-highlight">Naming Conventions</a></li><li><a href="#github-integration" class="table-of-contents__link toc-highlight">GitHub Integration</a></li><li><a href="#team-organization" class="table-of-contents__link toc-highlight">Team Organization</a></li><li><a href="#regular-maintenance" class="table-of-contents__link toc-highlight">Regular Maintenance</a></li></ul></li><li><a href="#seniority-levels" class="table-of-contents__link toc-highlight">Seniority Levels</a><ul><li><a href="#setting-up-levels" class="table-of-contents__link toc-highlight">Setting Up Levels</a></li><li><a href="#assigning-levels" class="table-of-contents__link toc-highlight">Assigning Levels</a></li></ul></li><li><a href="#common-issues" class="table-of-contents__link toc-highlight">Common Issues</a><ul><li><a href="#duplicate-github-handle-error" class="table-of-contents__link toc-highlight">Duplicate GitHub Handle Error</a></li><li><a href="#team-name-conflict" class="table-of-contents__link toc-highlight">Team Name Conflict</a></li><li><a href="#cant-see-person-after-adding" class="table-of-contents__link toc-highlight">Can&#39;t See Person After Adding</a></li><li><a href="#drag-and-drop-not-working" class="table-of-contents__link toc-highlight">Drag and Drop Not Working</a></li></ul></li><li><a href="#tips" class="table-of-contents__link toc-highlight">Tips</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/getting-started/getting-started">Getting Started</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 NorthVine Consulting.</div></div></div></footer></div>
 </body>
 </html>
