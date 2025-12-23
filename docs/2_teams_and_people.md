@@ -19,7 +19,7 @@ In ManagerDash, individuals are called "Contributors". Each contributor represen
 - **GitHub Handle**: GitHub username (required for PR integration)
 - **Initials**: 2-3 letter abbreviation (optional, auto-generated if not provided)
 - **Color**: Visual identifier used throughout the app
-- **Seniority Level**: Optional classification (e.g., E1, E5, L6). This is customizable. See 
+- **Seniority Level**: Optional classification (e.g., E1, E5, L6). This is customizable. See
 
 ## Adding a Person
 
@@ -108,6 +108,102 @@ Use drag-and-drop to assign people:
 - Team members appear as colored circles with initials
 - Click to expand and see details
 
+## Sentiment Analysis
+
+Starting in v1.7.0, ManagerDash includes sentiment tracking to help you monitor team member mood and satisfaction over time.
+
+### Understanding Sentiment
+
+Sentiment tracking allows you to record quick check-ins on how team members are feeling. This helps you:
+- Identify trends in team morale
+- Spot potential issues early
+- Track the impact of organizational changes
+- Maintain regular emotional check-ins with your team
+
+**The 3-Point Scale:**
+- **Sad** (Red) - Team member is experiencing low mood or dissatisfaction
+- **Neutral** (Blue) - Team member is in a middle-ground state
+- **Happy** (Green) - Team member is feeling positive and satisfied
+
+### Recording Sentiment
+
+Sentiment is recorded from the individual contributor dashboard.
+
+**How to Record:**
+1. Select a team member from the sidebar
+2. On their dashboard, find the **"Record Sentiment"** form in the right sidebar
+3. Click one of the three sentiment buttons:
+   - Sad face icon (red)
+   - Neutral face icon (blue)
+   - Happy face icon (green)
+4. Optionally, add context in the text field: "what's driving this sentiment?"
+5. Click **Save Sentiment**
+6. The form clears and the sentiment is recorded
+
+**Context Field:**
+The optional context field lets you add notes about what's affecting the person's mood:
+- "Team morale is high after successful launch"
+- "Dealing with burnout from long hours"
+- "Excited about new project assignment"
+- "Frustrated with technical blockers"
+
+This context helps you remember what was happening during each check-in.
+
+### Team Sentiment Chart
+
+The Team Sentiment Chart provides an aggregate view of your team's mood over time.
+
+**Location:**
+Navigate to a team dashboard to see the Team Sentiment section.
+
+**Features:**
+
+1. **Time Range Filter**
+   - Last 14 days
+   - Last 30 days (default)
+   - Last 90 days
+   - Filters all sentiment data to the selected time window
+
+2. **Average Sentiment Display**
+   - Large sentiment icon with color coding
+   - Numeric average (displayed to 2 decimal places)
+   - Interpretation label:
+     - Average ≥ 2.5: **Happy** (green)
+     - Average ≥ 1.5: **Neutral** (blue)
+     - Average < 1.5: **Sad** (red)
+
+3. **Sentiment Breakdown**
+   - Three cards showing count and percentage for each sentiment level
+   - Visual distribution of team moods
+   - Helps identify if mood is consistent or varied
+
+**Empty State:**
+When no sentiment data exists for the selected time range, you'll see a message encouraging you to start tracking team sentiment.
+
+### Sentiment Reminders
+
+ManagerDash can remind you to check in on team member sentiment.
+
+**How Reminders Work:**
+- Default reminder window: 14 days (2 weeks)
+- If you haven't recorded sentiment for a team member within the window, a reminder appears
+- Reminder message: "Record sentiment for {name} because you haven't checked in on their mood in {window}"
+- Reminders are configurable in the reminder rules settings
+
+**Managing Reminders:**
+- Reminders appear on dashboards and in the reminders section
+- Recording sentiment for a person clears their reminder
+- You can customize the reminder frequency in Settings
+
+### Best Practices for Sentiment Tracking
+
+1. **Regular Cadence**: Record sentiment weekly or bi-weekly during 1-on-1s
+2. **Use Context**: Always add a note about what's driving the sentiment
+3. **Look for Trends**: Use the team chart to identify patterns over time
+4. **Act on Data**: If sentiment drops, have a conversation to understand why
+5. **Privacy**: Sentiment data is stored locally and only visible to you
+6. **Consistency**: Track sentiment for all team members, not just those with issues
+
 ## Sidebar Navigation
 
 ### Collapsing/Expanding
@@ -147,6 +243,7 @@ When you select a team, you see:
 ### Features
 - Track team-level objectives
 - Compare skills across team members
+- **Team Sentiment** - View average team mood with time-based filtering (v1.7.0)
 - Generate team reports
 
 ## Individual Dashboard
@@ -164,6 +261,7 @@ When you select a person, you see:
 - Complete personal development tracking
 - PR quality evaluation
 - 360° feedback collection
+- Record sentiment check-ins with optional context notes (v1.7.0)
 - Comprehensive reporting
 
 ## Best Practices
@@ -182,6 +280,7 @@ When you select a person, you see:
 - Create teams that match your org structure
 - Keep team sizes manageable (5-10 people)
 - Use descriptive team names
+- Record sentiment regularly (weekly or bi-weekly) to track team morale trends and identify potential issues early
 
 ### Regular Maintenance
 - Update seniority levels as people grow
@@ -220,7 +319,7 @@ Go to Settings → Manage Teams to configure:
 
 ### Drag and Drop Not Working
 **Problem**: Can't move person to team
-**Solution**: 
+**Solution**:
 - Make sure you're dragging from the drag handle icon
 - Ensure sidebar is expanded
 - Try refreshing the app
@@ -232,3 +331,4 @@ Go to Settings → Manage Teams to configure:
 3. **Quick Access**: Recently selected people/teams are easier to access
 4. **Keyboard Navigation**: Use Tab to navigate through forms quickly
 5. **Bulk Setup**: If adding many people, keep the form open and save repeatedly
+6. **Sentiment Context**: Use the sentiment context field to note what's driving mood - helps identify patterns over time

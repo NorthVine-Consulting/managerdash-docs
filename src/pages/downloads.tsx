@@ -4,7 +4,7 @@ import Heading from '@theme/Heading';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './downloads.module.css';
 
-const CURRENT_VERSION = "1.6.0"
+const CURRENT_VERSION = "1.7.0"
 
 interface AppImage {
   title: string;
@@ -90,7 +90,7 @@ const appImages: AppImage[] = [
 function ImageCard({image}: {image: AppImage}): ReactNode {
   const imageSrc = useBaseUrl(image.src);
   const imageLink = image.link ? useBaseUrl(image.link) : undefined;
-  
+
   const imageContent = (
     <>
       <div className={styles.imageWrapper}>
@@ -108,7 +108,7 @@ function ImageCard({image}: {image: AppImage}): ReactNode {
       </div>
     </>
   );
-  
+
   if (imageLink) {
     return (
       <a href={imageLink} className={styles.imageCard}>
@@ -116,7 +116,7 @@ function ImageCard({image}: {image: AppImage}): ReactNode {
       </a>
     );
   }
-  
+
   return (
     <div className={styles.imageCard}>
       {imageContent}

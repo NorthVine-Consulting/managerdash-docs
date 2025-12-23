@@ -2,68 +2,57 @@
 title: Release Notes
 ---
 
-# ManagerDash Release Notes — v1.7.0  
+# ManagerDash Release Notes — v1.7.0
 ### *The “Yes, This Is Actually New” Edition*
 
 Released: **21 December 2025**
 
-## 📊 Team Sentiment Tracking (New!)  
+## 📊 Team Sentiment Tracking (New!)
 You can now capture and visualize team sentiment over time.
 
-- Add sentiment entries via a simple form  
-- Get reminders to check in (because it’s easy to forget)  
-- See a compact sentiment breakdown on the team dashboard  
-- View a sentiment chart that shows trends, not just one-off moods  
+- Add sentiment entries via a simple form
+- Get reminders to check in (because it’s easy to forget)
+- See a compact sentiment breakdown on the team dashboard
+- View a sentiment chart that shows trends, not just one-off moods
 
 This is about spotting patterns early — before they show up as attrition.
 
-## 📝 Reports That Read Like Leadership Artifacts  
-Reports are clearer, more focused, and more useful.
-
-- Skills reports now line up cleanly with skills assessments  
-- Feedback content is more prominent and easier to scan  
-- Feedback counts are accurate and trustworthy  
-- Team report markdown exports are fixed and reliable  
-- Visual styling improvements make reports easier to share upward  
-
-These are reports you can actually send to your boss without apologizing first.
-
-## 🧠 Feedback That Moves Forward  
+## 🧠 Feedback That Moves Forward
 Feedback workflows got noticeably smoother.
 
-- Mark feedback as *delivered* directly from the dashboard  
-- Recent feedback is ordered by when it was created (not mysteriously reshuffled)  
-- Quick-add feedback uses the correct states, so nothing disappears  
-- Feedback reminders show up where you’re already working  
+- Mark feedback as *delivered* directly from the dashboard
+- Recent feedback is ordered by when it was created (not mysteriously reshuffled)
+- Quick-add feedback uses the correct states, so nothing disappears
+- Feedback reminders show up where you’re already working
 
 Less hunting. More follow-through.
 
-## 🧭 A Calmer, Smarter Dashboard  
+## 🧭 A Calmer, Smarter Dashboard
 The dashboard layout has been reorganized for clarity.
 
-- Summary dashboard moved to a more intuitive location  
-- Sections reordered so the important stuff appears first  
-- Collapsible sections reduce scrolling fatigue  
-- Career goals are no longer mixed into development goals  
-- Date picker added for better time-based context  
+- Summary dashboard moved to a more intuitive location
+- Sections reordered so the important stuff appears first
+- Collapsible sections reduce scrolling fatigue
+- Career goals are no longer mixed into development goals
+- Date picker added for better time-based context
 
 It’s easier to answer “how is my team doing?” at a glance.
 
-## 🔔 Reminders, Where You Expect Them  
+## 🔔 Reminders, Where You Expect Them
 Reminders are more consistent and easier to find.
 
-- Customizable reminders (yes, really customizable)  
-- Reminders appear directly on alias dashboards  
-- Headings and labels are consistent across views  
+- Customizable reminders (yes, really customizable)
+- Reminders appear directly on alias dashboards
+- Headings and labels are consistent across views
 
 The app will nudge you — but politely.
 
-## 🔍 Clearer PR Reviews  
+## 🔍 Clearer PR Reviews
 PR review signals are easier to interpret.
 
-- All PRs are fetched, not just a subset  
-- PR states are labeled for quick scanning  
-- Traffic lights now have titles, so color isn’t doing all the work  
+- All PRs are fetched, not just a subset
+- PR states are labeled for quick scanning
+- Traffic lights now have titles, so color isn’t doing all the work
 
 You can tell what’s blocked, moving, or done without guessing.
 

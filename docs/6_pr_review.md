@@ -36,7 +36,7 @@ Starting in v1.6.0, ManagerDash automatically fetches pull requests when you nav
 1. Select a person from the sidebar
 2. Click the **PR Review** tab
 3. The date range defaults to the last 7 days
-4. PRs are automatically fetched in the background
+4. PRs are automatically fetched in the background (regardless of state)
 5. A skeleton loading state shows while fetching
 6. PRs appear grouped by repository once loaded
 
@@ -49,17 +49,33 @@ You can also manually trigger a fetch or refetch with different date ranges:
 3. Adjust the date range if needed:
    - **Start Date**: Beginning of period
    - **End Date**: End of period (today by default)
-4. Click **"Fetch Pull Requests"** to refetch
+4. Click **"Fetch Pull Requests"** to retrieve all PRs from the selected date range
 5. Wait for the fetch to complete (may take several seconds)
 6. PRs appear grouped by repository
 
 ### What Gets Fetched
 
-The system fetches:
-- **Closed PRs only**: Merged or closed (not open PRs)
+Starting in v1.7.0, the system fetches all pull requests regardless of state:
+
+- **All PR States**: Open, Closed, Draft, and Merged PRs
 - **Author Match**: PRs where the person is the author
-- **Date Filter**: PRs closed within the selected range
+- **Date Filter**: PRs created within the selected range (filters by creation date across all states)
 - **All Repos**: Across all repositories they (and your token) have access to
+- **Draft PRs Included**: Work-in-progress PRs are now included, giving you a complete picture of contributions
+
+This enhancement allows you to see the full scope of someone's work, including draft PRs that may represent significant in-progress contributions.
+
+### Understanding PR States
+
+Each pull request displays a color-coded state indicator for quick visual scanning:
+
+**PR State Indicators:**
+- **Open** (Green pill) - Active pull requests ready for review
+- **Draft** (Gray pill) - Work-in-progress PRs not yet ready for review
+- **Closed** (Red pill) - PRs closed without merging
+- **Merged** (Purple pill) - Successfully merged pull requests
+
+The state is determined by priority: merged → closed → draft → open. For example, a merged PR will always show "Merged" regardless of other attributes.
 
 ### PR Data Included
 
@@ -67,8 +83,8 @@ For each PR:
 - **Title**: PR name
 - **Repository**: Repo name
 - **PR Number**: Link to GitHub
-- **Status**: Closed/Merged
-- **Dates**: Created and closed dates
+- **State Badge**: Visual indicator (Open/Draft/Closed/Merged) with color coding
+- **Dates**: Created and closed/merged dates
 - **Changes**: Lines added/deleted
 - **Files**: Number of files changed
 - **Comments**: Total comments and review comments
@@ -99,7 +115,7 @@ PRs are rated using a three-level system:
 ### Rating Criteria
 
 **Feedback opportunity (-)**:
-Rating a pull request as a feedback opportunity is a way for managers to find trends in technical contributions, not as an error tally. It should be relative to the engineer's past performance and experience level. For example. A PR from an early career engineer that undergoes multiple rounds of review may suggest a mini retro in a 1:1 to ensure they are learning from the experience. A PR from a more senior engineer that requires significant rework may suggest a larger coaching conversation around doing more thorough planning or technical design. 
+Rating a pull request as a feedback opportunity is a way for managers to find trends in technical contributions, not as an error tally. It should be relative to the engineer's past performance and experience level. For example. A PR from an early career engineer that undergoes multiple rounds of review may suggest a mini retro in a 1:1 to ensure they are learning from the experience. A PR from a more senior engineer that requires significant rework may suggest a larger coaching conversation around doing more thorough planning or technical design.
 
 Here are a few other reasons why you may mark a PR as a feedback opportunity:
 
@@ -178,19 +194,19 @@ Notes help you:
 
 ```
 Not meeting (-):
-"Required 3 rounds of review. Initial implementation missed 
-error handling and had unclear variable names. Eventually 
+"Required 3 rounds of review. Initial implementation missed
+error handling and had unclear variable names. Eventually
 got to acceptable state but needed significant guidance."
 
 Meeting (=):
-"Solid implementation of feature X. Clear code, good tests. 
-One round of minor feedback on naming conventions. 
+"Solid implementation of feature X. Clear code, good tests.
+One round of minor feedback on naming conventions.
 Merged smoothly."
 
 Exceeding (+):
-"Outstanding work on performance optimization. Not only 
-solved the immediate problem but proactively added 
-benchmarks and documentation. Reduced query time by 80%. 
+"Outstanding work on performance optimization. Not only
+solved the immediate problem but proactively added
+benchmarks and documentation. Reduced query time by 80%.
 Excellent example for the team."
 ```
 
@@ -210,10 +226,11 @@ Click the **PR title** to open in your browser:
 Friday:
 1. Select team member
 2. Set date range to last 7 days (this is the default)
-3. Fetch PRs
-4. Rate contributions of note
-5. Add quick notes
-6. Repeat for each team member
+3. Fetch PRs (includes open, draft, closed, and merged)
+4. Review draft PRs for in-progress work if needed
+5. Rate contributions of note
+6. Add quick notes
+7. Repeat for each team member
 ```
 
 ### Monthly Performance Check
@@ -249,6 +266,7 @@ End of month:
 3. **Context Matters**: Consider complexity and scope
 4. **Be Fair**: Don't compare early career to senior
 5. **Trend Over Time**: Look for improvement patterns
+6. **Draft PRs**: Consider reviewing draft PRs to provide early feedback, though you may want to wait until they're ready for final review
 
 ### Note-Taking
 

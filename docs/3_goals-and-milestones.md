@@ -23,7 +23,7 @@ ManagerDash supports two types of goals:
 - **Title**: Clear, concise name for the goal (required)
 - **Description**: Detailed explanation of the goal
 - **Goal Type**: Development or Career (selected when creating)
-- **Status**: Current state (Planned, In Progress, Done, Blocked, Archived)
+- **Status**: Current state (Backlog, Planned, In Progress, Done, Blocked, Archived)
 - **Start Date**: When work begins
 - **Target Date**: When the goal should be completed (Development goals only)
 - **Milestones**: Trackable sub-tasks or checkpoints
@@ -62,7 +62,10 @@ ManagerDash supports two types of goals:
 
 ### Available Statuses
 
-- **Planned**: Goal is defined but work hasn't started
+ManagerDash supports six goal statuses to track progress:
+
+- **Backlog**: Goals that are not yet ready to be worked on - early ideas or deprioritized items that you want to track but aren't committed to yet
+- **Planned**: Goal is defined and committed, but work hasn't started yet
 - **In Progress**: Active work is happening
 - **Done**: Goal has been completed
 - **Blocked**: Progress is stopped by dependencies or issues
@@ -73,6 +76,24 @@ ManagerDash supports two types of goals:
 1. Click the edit icon on the goal
 2. Select new status from the dropdown
 3. Save the change
+
+### Understanding the Backlog Section
+
+Goals with **Backlog** status are displayed differently from other goals:
+
+- Backlog goals appear in a **separate collapsible section** at the bottom of the goals list
+- The Backlog section can be expanded or collapsed using the chevron icon
+- Backlog goals **cannot be reordered** (no drag handles are shown)
+- They are completely separated from active goals before splitting into Career and Development categories
+
+**When to use Backlog:**
+- Early-stage goal ideas that need more definition
+- Lower-priority goals that you want to track but aren't ready to commit to
+- Future objectives that depend on other work being completed first
+- Goals that have been deprioritized but might return to active status later
+
+**Moving from Backlog to active status:**
+When you're ready to commit to a backlog goal, simply edit it and change the status to **Planned**. The goal will then appear in the appropriate active section (Career or Development goals).
 
 ## Milestones
 
@@ -215,10 +236,11 @@ Archive goals that are:
 ### Goal Setting
 
 1. **Be Specific**: Use clear, measurable goal titles
-2. **Set Deadlines**: Always include target dates
+2. **Set Deadlines**: Always include target dates for development goals
 3. **Break It Down**: Create milestones for complex goals
 4. **Review Regularly**: Update status weekly
 5. **Keep Current**: Archive completed or cancelled goals
+6. **Use Backlog Wisely**: Place ideas in Backlog status until you're ready to commit. Move to Planned when ready to start work
 
 ### Milestone Management
 
@@ -316,12 +338,13 @@ Reports show:
 
 1. **Quick Status Update**: Click edit, change status dropdown, save—takes 5 seconds
 2. **Keyboard Navigation**: Use Tab to move between form fields quickly
-3. **Drag to Prioritize**: Reorder goals to reflect current priorities
+3. **Drag to Prioritize**: Reorder active goals to reflect current priorities (note: backlog goals cannot be reordered)
 4. **Collapse for Overview**: Collapse all goals to see high-level progress
 5. **Milestone Naming**: Use action verbs (Complete, Implement, Review, Deploy)
 6. **Target Dates**: Set realistic dates with buffer time
 7. **Status Synchronization**: When all milestones are completed, update goal to Done
 8. **Archive Regularly**: Keep active list clean by archiving old goals
+9. **Backlog as Parking Area**: Use Backlog goals to track future work without cluttering your active goals list
 
 ## Common Issues
 
