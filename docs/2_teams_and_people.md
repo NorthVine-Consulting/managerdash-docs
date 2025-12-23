@@ -187,7 +187,7 @@ ManagerDash can remind you to check in on team member sentiment.
 **How Reminders Work:**
 - Default reminder window: 14 days (2 weeks)
 - If you haven't recorded sentiment for a team member within the window, a reminder appears
-- Reminder message: "Record sentiment for {name} because you haven't checked in on their mood in {window}"
+- Reminder message: "Record sentiment for \{name\} because you haven't checked in on their mood in \{window\}"
 - Reminders are configurable in the reminder rules settings
 
 **Managing Reminders:**
