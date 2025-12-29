@@ -4,7 +4,7 @@ import Heading from '@theme/Heading';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './downloads.module.css';
 
-const CURRENT_VERSION = "1.7.0"
+const CURRENT_VERSION = "1.7.1"
 
 interface AppImage {
   title: string;

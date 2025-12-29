@@ -69,6 +69,7 @@ const config: Config = {
           label: 'Docs',
         },
         {to: '/downloads', label: 'Downloads', position: 'left'},
+        {to: '/pricing', label: 'Pricing', position: 'left'},
       ],
 
     },
