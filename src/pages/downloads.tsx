@@ -16,16 +16,9 @@ interface AppImage {
 
 const appImages: AppImage[] = [
   {
-    title: 'Team Dashboard - Dark Mode',
-    description: 'View your team overview in dark mode',
-    src: '/img/app_img/team_dashboard_dark.png',
-    category: 'Dashboard',
-    link: '/docs/teams_and_people#team-dashboard',
-  },
-  {
-    title: 'Team Dashboard - Light Mode',
-    description: 'View your team overview in light mode',
-    src: '/img/app_img/team_dashboard_light.png',
+    title: 'Home Dashboard',
+    description: 'View your organization overview',
+    src: '/img/app_img/home-dashboard.png',
     category: 'Dashboard',
     link: '/docs/teams_and_people#team-dashboard',
   },
@@ -37,9 +30,16 @@ const appImages: AppImage[] = [
     link: '/docs/teams_and_people#individual-dashboard',
   },
   {
+    title: 'Team Dashboard',
+    description: 'View your team overview in dark mode',
+    src: '/img/app_img/team-dash.png',
+    category: 'Dashboard',
+    link: '/docs/teams_and_people#team-dashboard',
+  },
+  {
     title: 'Goals & Milestones',
     description: 'Track and manage team goals',
-    src: '/img/app_img/alias_goals_light.png',
+    src: '/img/app_img/contributor-goals.png',
     category: 'Features',
     link: '/docs/goals-and-milestones',
   },
@@ -60,7 +60,7 @@ const appImages: AppImage[] = [
   {
     title: 'PR Review Dashboard',
     description: 'Monitor pull request reviews',
-    src: '/img/app_img/alias_pr_review_light.png',
+    src: '/img/app_img/pr-review.png',
     category: 'Features',
     link: '/docs/pr_review',
   },
@@ -74,7 +74,7 @@ const appImages: AppImage[] = [
   {
     title: 'Individual Reports',
     description: 'Generate detailed individual reports',
-    src: '/img/app_img/alias_report_light.png',
+    src: '/img/app_img/contributor-report.png',
     category: 'Reports',
     link: '/docs/reports#generating-individual-reports',
   },
