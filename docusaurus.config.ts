@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'ManagerDash Docs',
+  title: 'ManagerDash',
   tagline: 'Empowering you to lead, learn, and grow your team.',
   favicon: 'img/favicon.ico',
 
@@ -75,7 +75,25 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'ManagerDash Logo',
+        src: 'img/logo.svg',
+        href: '/',
+      },
       links: [
+        {
+          title: 'Product',
+          items: [
+            {
+              label: 'Pricing',
+              to: '/pricing',
+            },
+            {
+              label: 'Downloads',
+              to: '/downloads',
+            },
+          ],
+        },
         {
           title: 'Docs',
           items: [
